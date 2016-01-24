@@ -35,7 +35,7 @@ library(dplyr)
 
 ```r
 steps_by_day <- group_by(steps_data, date)
-steps_summary <- summarize(steps_by_day, total_steps = sum(steps, na.rm = TRUE))
+steps_summary <- summarize(steps_by_day, total_steps = sum(steps))
 ```
 
 This graphic display shows the histogram of the total number of steps taken each day.
@@ -62,7 +62,7 @@ print(mean_total)
 ```
 
 ```
-## [1] 9354.23
+## [1] 10766.19
 ```
 
 The median total number of steps taken per day is
@@ -72,7 +72,7 @@ print(median_total)
 ```
 
 ```
-## [1] 10395
+## [1] 10765
 ```
 
 ## What is the average daily activity pattern?
@@ -201,7 +201,7 @@ print(median_total2)
 ## [1] 10766.19
 ```
 
-The mean and median calculated using the new dataset are slightly higher than those calculated in the first part of the assignment where missing values were ignored. Using the new dataset, the mean is equal to the median. This suggests that the distribution of total number of steps is symmetric. The histogram above supports this. The histogram shows that the distribution of the total number of steps taken per day now appears bell-shaped - close to a normal distribution. Imputing missing values lessened the bias on the calculations and summaries of the data.
+The mean calculated using the new dataset is equal to the mean calculated in the first part of the assignment, where missing values were ignored. The median calculated using the new dataset is close in value to the median calculated in the first part of the assignment. Using the new dataset, the mean is equal to the median. This suggests that the distribution of total number of steps is symmetric. The histogram above supports this. The histogram shows that the distribution of the total number of steps taken per day now appears bell-shaped - close to a normal distribution. Imputing missing values lessened the bias on the calculations and summaries of the data.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
